@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef1ff, #d9e1ff);
+    color: #1d1d2b;
+}
+
+.cantenir {
+    width: 100%;
+    padding: 50px;
+}
+
+/* Navigatsiya */
+.lust {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.list-link {
+    display: inline-block;
+    color: #1d1d2b;
+    background: #fff;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    box-shadow: 0 6px 0 #aab4e6, 0 16px 24px rgba(60, 70, 140, 0.25);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.list-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #aab4e6, 0 22px 32px rgba(60, 70, 140, 0.3);
+}
+
+.list-link:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 #aab4e6, 0 4px 8px rgba(60, 70, 140, 0.3);
+}
+
+/* Sarlavha */
+.markaz {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #3b4cca;
+    text-align: center;
+    text-shadow:
+        1px 1px 0 #2a37a0,
+        2px 2px 0 #2a37a0,
+        3px 3px 0 #2a37a0,
+        4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Kartalar to'ri */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    perspective: 1200px; /* 3D chuqurlik */
+}
+
+/* 3D karta */
+.menu-burger {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 24px;
+    transform-style: preserve-3d;
+    transform: rotateX(4deg) rotateY(-4deg);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow:
+        -8px 8px 0 #aab4e6,
+        -16px 24px 40px rgba(60, 70, 140, 0.3);
+}
+
+.menu-burger:hover {
+    transform: rotateX(0) rotateY(0) translateY(-10px) translateZ(20px);
+    box-shadow:
+        -4px 4px 0 #aab4e6,
+        0 30px 50px rgba(60, 70, 140, 0.4);
+}
+
+.burger-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    transform: translateZ(30px); /* rasm kartadan oldinga chiqadi */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.burger-food {
+    transform: translateZ(20px);
+    flex: 1;
+}
+
+.food-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3b4cca;
+    margin-bottom: 6px;
+}
+
+.food-subtitle {
+    font-size: 14px;
+    color: #5a5f7a;
+    line-height: 1.5;
+}
+
+/* 3D tugma */
+.burger-btn {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: #3b4cca;
+    border: none;
+    border-radius: 14px;
+    padding: 14px;
+    cursor: pointer;
+    transform: translateZ(25px);
+    box-shadow: 0 6px 0 #2a37a0, 0 12px 18px rgba(42, 55, 160, 0.4);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.burger-btn:hover {
+    transform: translateZ(25px) translateY(-2px);
+    box-shadow: 0 8px 0 #2a37a0, 0 16px 22px rgba(42, 55, 160, 0.45);
+}
+
+.burger-btn:active {
+    transform: translateZ(25px) translateY(6px);
+    box-shadow: 0 0 0 #2a37a0, 0 4px 8px rgba(42, 55, 160, 0.4);
+}
+
+@media (max-width: 768px) {
+    .cantenir { padding: 20px; }
+    .title { font-size: 30px; }
+}

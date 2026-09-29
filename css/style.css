@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef1ff, #d9e1ff);
+    color: #1d1d2b;
+}
+
+.cantenir {
+    width: 100%;
+    padding: 50px;
+    perspective: 1200px; /* 3D chuqurlik shu yerdan boshlanadi */
+}
+
+/* Navigatsiya */
+.lust {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* gap: 600px o'rniga */
+    padding: 20px;
+}
+
+/* 3D tugmalar */
+.list-link {
+    display: inline-block;
+    color: #1d1d2b;
+    background: #fff;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    box-shadow:
+        0 6px 0 #aab4e6,
+        0 16px 24px rgba(60, 70, 140, 0.25);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.list-link:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 9px 0 #aab4e6,
+        0 22px 32px rgba(60, 70, 140, 0.3);
+}
+
+.list-link:active {
+    transform: translateY(6px);
+    box-shadow:
+        0 0 0 #aab4e6,
+        0 4px 8px rgba(60, 70, 140, 0.3);
+}
+
+/* Sarlavha bloki */
+.kirish {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.kirish-title {
+    max-width: 900px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70.4px;
+    padding: 50px 60px;
+    background: #fff;
+    border-radius: 28px;
+    color: #3b4cca;
+    transform: rotateX(12deg) rotateY(-10deg);
+    transition: transform 0.4s ease;
+    box-shadow:
+        -12px 12px 0 #aab4e6,
+        -24px 32px 50px rgba(60, 70, 140, 0.35);
+    /* qatlamli soya = 3D matn */
+    text-shadow:
+        1px 1px 0 #2a37a0,
+        2px 2px 0 #2a37a0,
+        3px 3px 0 #2a37a0,
+        4px 4px 0 #2a37a0,
+        5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.kirish-title:hover {
+    transform: rotateX(0) rotateY(0);
+}
